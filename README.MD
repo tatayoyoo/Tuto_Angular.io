@@ -4,6 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Tutorial step
 https://angular.io/tutorial/tour-of-heroes/toh-pt2
+14-12-2022 : https://angular.io/tutorial/tour-of-heroes/toh-pt2
 13-12-2022 : https://angular.io/tutorial/toh-pt1
 
 ## Development server
