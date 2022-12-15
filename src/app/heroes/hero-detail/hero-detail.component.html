@@ -1,0 +1,14 @@
+<span *ngIf="hero!= null">
+    <h2> Id : {{ hero.id }}</h2>
+    <h2> Name : {{ hero.name | uppercase }}</h2>
+    <h2> His power : {{ hero.power }}</h2>
+    <!--  -->
+    <div>
+        <label for="name">Enter the name of the hero : </label>
+        <input
+            id="name"
+            [(ngModel)]="hero.name"
+            placeholder="Windstorm"
+        >
+    </div>
+</span>
