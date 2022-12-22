@@ -1,5 +1,8 @@
+import { Location } from '@angular/common';
 import { Component, Input } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { IHero } from './../../../core/entity/i-hero';
+import { HeroService } from './../../../core/services/hero/hero.service';
 
 @Component({
   selector: 'app-hero-detail',
@@ -10,4 +13,23 @@ export class HeroDetailComponent {
 
   @Input()
   hero?: IHero;
+
+  constructor(
+    private route: ActivatedRoute,
+    private heroService: HeroService,
+    private location: Location
+  ) { }
+
+  ngOnInit() {
+    this.getHero();
+  }
+
+  getHero(): void {
+    const id = Number(this.route.snapshot.paramMap.get('id'));
+    this.heroService.getHero(id).subscribe(hero => this.hero = hero);
+  }
+
+  goBack(): void {
+    this.location.back();
+  }
 }

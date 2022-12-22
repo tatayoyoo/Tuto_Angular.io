@@ -1,18 +1,13 @@
 <div>
-    <ul class="heroes">
-        <li *ngFor="let hero of heroes">
-            <button
-                [class.selected]="hero == selectedHero"
-                type="button"
-                (click)="onSelect(hero)"
-            >
-                <span class="badge">{{ hero.id }}</span>
-                <span class="name">{{ hero.name }}</span>
-                <!-- <span>{{ hero.power }}</span> -->
-            </button>
-        </li>
-    </ul>
+  <ul class="heroes">
+    <li *ngFor="let hero of heroes">
+      <a routerLink="/heroes/detail/{{hero.id}}">
+        <span class="badge">{{ hero.id }}</span>
+        <span class="name">{{ hero.name }}</span>
+        <!-- <span>{{ hero.power }}</span> -->
+      </a>
+    </li>
+  </ul>
 </div>
 
 
-<app-hero-detail [hero]="selectedHero"></app-hero-detail>
