@@ -3,15 +3,18 @@ import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
+
 import { AppComponent } from './app.component';
-import { HeroDetailComponent } from './heroes/hero-detail/hero-detail.component';
-import { HeroesComponent } from './heroes/heroes.component';
+import { HeroDetailComponent } from './business/heroes/hero-detail/hero-detail.component';
+import { HeroesComponent } from './business/heroes/heroes.component';
+import { MessagesComponent } from './business/messages/messages.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeroesComponent,
-    HeroDetailComponent
+    HeroDetailComponent,
+    MessagesComponent
   ],
   imports: [
     BrowserModule,

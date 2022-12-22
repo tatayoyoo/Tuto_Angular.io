@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { IHero } from './../core/entity/i-hero';
-import { HEROES } from './../core/mock/mock-heroes';
+import { IHero } from '../../entity/i-hero';
+import { HEROES } from '../../mock/mock-heroes';
 
 @Injectable({
   providedIn: 'root'
